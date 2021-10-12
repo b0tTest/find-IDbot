@@ -20,7 +20,7 @@ https://github.com/ZauteKm/ids-Robot
 cd ids-Robot
 pip3 install -r requirements.txt
 # Change The Vars File Accordingly
-python3 -m bot.py
+python3 bot.py
 </pre>
 </p>
 </details>
