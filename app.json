@@ -1,0 +1,47 @@
+
+    "name": "ids-Robot",
+    "description": "A Id Bot by @ZauteKm",
+    "logo": "https://telegra.ph/file/a894f9a8f50c2a063f06f.jpg",
+    "stack": "container",
+    "keywords": [
+        "Telegram",
+        "Id",
+        "Bot"
+    ],
+    "website": "https://t.me/tg_idsBot",
+    "repository": "https://github.com/ZauteKm/ids-Robot",
+    "success_url": "http://t.me/ZauteKm",
+    "env": {
+        "API_ID": {
+            "description": "Your APP ID From my.telegram.org/app",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your API Hash From my.telegram.org/app",
+            "value": ""
+        },
+        "BOT_TOKEN": {
+            "description": "Your Bot Token From @BotFather",
+            "value": ""
+        },
+        "UPDATE_CHANNEL": {
+            "description": "Channel User Name Without [@] Eg: TGBotsProJect",
+            "value": ""
+        },
+        "BOT_USERNAME": {
+            "description": "Bot UserName From @BotFather Without [@] Eg: tg_idsbot ",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
