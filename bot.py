@@ -29,7 +29,7 @@ if __name__ == "__main__" :
         root="plugins"
     )
     bot = Client(
-        "idstgbot",
+        "ZauteKm",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
