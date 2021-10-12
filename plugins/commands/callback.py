@@ -18,7 +18,7 @@ from pyrogram import Client as MT_ID_Bot
 from plugins.translation import Translation
 from plugins.config import Config
 from plugins.commands.buttons import START_BUTTON, HELP_BUTTON, ABOUT_BUTTON
-from plugins.commands.commands import developer, co_developer, source, mt_chat, mt_bot
+from plugins.commands.commands import developer, feed_back, source, support_chat, bot_channel
 from plugins.modules.buttons import ID_BUTTONS, INFO_BUTTONS
 
 BOT_USERNAME=Config.BOT_USERNAME # ReStart Option 
