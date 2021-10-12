@@ -22,14 +22,14 @@ logger = logging.getLogger(__name__)
 
 from pyrogram import Client 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
-from idsRobot.config import Config
+from plugins.config import Config
 
 if __name__ == "__main__" :
     plugins = dict(
-        root="idsRobot"
+        root="plugins"
     )
     bot = Client(
-        "idsRobot",
+        "idstgbot",
         bot_token=Config.BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
