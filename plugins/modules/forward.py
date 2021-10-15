@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-# Copyright (C) @ZauteKm
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from pyrogram import filters
 from pyrogram import Client as MT_ID_Bot
@@ -53,7 +39,7 @@ async def info(bot, msg):
         if msg.forward_from["is_bot"]:
             text += "<b><u>🤖 Bot Info</u></b>"
         else:
-            text += "<b><u>👤 User Indo</u></b>"
+            text += "<b><u>👤 User Info</u></b>"
         text += f'\n\n<b>👨‍💼 Name:</b> {msg.forward_from["first_name"]}'
         if msg.forward_from["username"]:
             text += f'\n\n<b>🔗 UserName:</b> @{msg.forward_from["username"]} \n\n🆔 ID : <code>{msg.forward_from["id"]}</code>'
