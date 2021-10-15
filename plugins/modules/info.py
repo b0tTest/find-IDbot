@@ -1,5 +1,5 @@
 from pyrogram import filters
-from pyrogram import Client as MT_ID_Bot
+from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import UserNotParticipant
 from plugins.translation import Translation
@@ -12,7 +12,7 @@ JOIN=Translation.JOIN_TEXT # Button Text (Update Channel)
 TRY=Translation.TRY_TEXT # Button Text (Update Channel)
 SUB_TEXT=Translation.FSUB_TEXT # FSUB Information Text
 
-@ZauteKm.on_message(filters.private & filters.command("id"))
+@Client.on_message(filters.private & filters.command("id"))
 async def id_handler(bot, update):
     update_channel = UPDATE_CHANNEL
     if update_channel:
@@ -41,7 +41,7 @@ async def id_handler(bot, update):
         reply_markup=reply_markup
     )
 
-@ZauteKm.on_message(filters.private & filters.command("info"))
+@Client.on_message(filters.private & filters.command("info"))
 async def info_handler(bot, update):
     update_channel = UPDATE_CHANNEL
     if update_channel:
