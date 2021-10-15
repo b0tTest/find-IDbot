@@ -1,6 +1,6 @@
 
 from pyrogram import filters
-from pyrogram import Client as MT_ID_Bot
+from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from plugins.translation import Translation
@@ -12,7 +12,7 @@ JOIN=Translation.JOIN_TEXT # Button Text (Update Channel)
 TRY=Translation.TRY_TEXT # Button Text (Update Channel)
 SUB_TEXT=Translation.FSUB_TEXT # FSUB Information Text
 
-@ZauteKm.on_message(filters.private & filters.forwarded)
+@Client.on_message(filters.private & filters.forwarded)
 async def info(bot, msg):
     update_channel = UPDATE_CHANNEL
     if update_channel:
