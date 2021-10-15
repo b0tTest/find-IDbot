@@ -1,20 +1,6 @@
-#!/usr/bin/env python3
-# Copyright (C) @ZauteKm
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from pyrogram import filters
-from pyrogram import Client as MT_ID_Bot
+from pyrogram import Client
 from plugins.translation import Translation
 from plugins.config import Config
 from plugins.commands.buttons import START_BUTTON, HELP_BUTTON, ABOUT_BUTTON
@@ -23,7 +9,7 @@ from plugins.modules.buttons import ID_BUTTONS, INFO_BUTTONS
 
 BOT_USERNAME=Config.BOT_USERNAME # ReStart Option 
 
-@ZauteKm.on_callback_query()
+@Client.on_callback_query()
 async def cb_handler(client, query):
 
     if query.data == "start":
