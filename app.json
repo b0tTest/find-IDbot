@@ -33,19 +33,20 @@
             "value": ""
         }
     },
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
     },
-    {
-      "url": "heroku/python"
-    }
-  ],
-  "stack": "heroku-20"
+    "stack": "heroku-20"
 }
