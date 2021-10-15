@@ -1,20 +1,6 @@
-#!/usr/bin/env python3
-# Copyright (C) @ZauteKm
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 from pyrogram import filters
-from pyrogram import Client as MT_ID_Bot
+from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 from plugins.translation import Translation
@@ -27,13 +13,13 @@ JOIN=Translation.JOIN_TEXT # Button Text (Update Channel)
 TRY=Translation.TRY_TEXT # Button Text (Update Channel)
 SUB_TEXT=Translation.FSUB_TEXT # FSUB Information Text
 
-developer="ZauteKm"
-feed_back="zautebot"
-source="https://github.com/ZauteKm/tg_idsbot"
-support_chat="ZautesChat"
-bot_channel="TGBotsProJect"
+developer="OO7ROBot"
+feed_back="OO7RObot"
+source="https://github.com/OO7ROBOT"
+support_chat="MYTESTBOTZ"
+bot_channel="MYTESTBOTZ"
 
-@ZauteKm.on_message(filters.private & filters.command("start"))
+@Client.on_message(filters.private & filters.command("start"))
 async def start_handler(bot, update):
     update_channel = UPDATE_CHANNEL
     if update_channel:
@@ -63,7 +49,7 @@ async def start_handler(bot, update):
   )
 
 
-@ZauteKm.on_message(filters.private & filters.command("help"))
+@Client.on_message(filters.private & filters.command("help"))
 async def help_handler(bot, update):
     update_channel = UPDATE_CHANNEL
     if update_channel:
@@ -92,7 +78,7 @@ async def help_handler(bot, update):
         reply_markup=reply_markup
   )
 
-@ZauteKm.on_message(filters.private & filters.command("about"))
+@Client.on_message(filters.private & filters.command("about"))
 async def about_handler(bot, update):
     update_channel = UPDATE_CHANNEL
     if update_channel:
@@ -116,7 +102,7 @@ async def about_handler(bot, update):
             return  
     reply_markup =  ABOUT_BUTTON
     await update.reply_text(
-        text=Translation.ABOUT_MSG.format(BOT_USERNAME, developer, feed_back, support_chat, bot_channel, source),
+        text=Translation.ABOUT_MSG.format(BOT_USERNAME, developer, feed_back, bot_channel),
         disable_web_page_preview=True,
         reply_markup=reply_markup
   )
